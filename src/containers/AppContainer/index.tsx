@@ -5,7 +5,7 @@ import '../../styles/App.css'
 
 export const App: React.FC = () => {
     const [count, setCount] = useState(0)
-    const [lastCount, setLastCount] = useState(0)
+    const [secondCount, setSecondCount] = useState(0)
 
     return (
         <div className='App'>
@@ -27,9 +27,11 @@ export const App: React.FC = () => {
                     count is {count}
                 </button>
                 <button
-                    onClick={() => setLastCount((lastCount) => lastCount + 1)}
+                    onClick={() =>
+                        setSecondCount((secondCount) => secondCount + 1)
+                    }
                 >
-                    lastCount is {lastCount}
+                    lastCount is {secondCount}
                 </button>
                 <p>
                     Edit <code>src/App.tsx</code> and save to test HMR
